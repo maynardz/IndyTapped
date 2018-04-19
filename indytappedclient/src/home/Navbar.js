@@ -28,11 +28,11 @@ class NavBar extends React.Component {
         return (
           <div>
             <Navbar color="light" light expand="md">
-              <NavbarBrand href="/">Indy Tapped</NavbarBrand>
+              <NavbarBrand href="/"></NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
-                  <Button outline color="primary" size="sm">
+                  <Button outline color="secondary" size="sm">
                     <NavLink onClick={this.props.logout}>Logout</NavLink>
                   </Button>
                 </Nav>

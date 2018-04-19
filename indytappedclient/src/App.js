@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Confirm from './auth/Confirm';
 import NavBar from './home/Navbar';
 import Auth from './auth/Auth';
 import Splash from './home/Splash';
