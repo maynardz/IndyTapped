@@ -2,14 +2,18 @@ import React from 'react';
 import background from '../assets/wood.jpg';
 import logo from '../assets/indy_tapped_black.png';
 import styled from 'styled-components';
+import Brewery from '../breweries/Brewery';
 
 const BackgroundImage = styled.div`
 background-image: url(${background});
+background-size: 100vw 100vh;
+background-attachment: fixed;
 background-repeat: no-repeat;
-background-size: 100%
-display: block;
-height: 55em;
-margin: 0 auto;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1000;
 `;
 
 const Logo = styled.img`
@@ -27,10 +31,8 @@ const Splash = (props) => {
             </div>
             <div>
                 <BackgroundImage >
+                    <Brewery token={props.token} />
                 </BackgroundImage>
-            </div>
-            <div>
-                
             </div>
         </div>
     )
