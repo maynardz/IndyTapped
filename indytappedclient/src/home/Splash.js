@@ -21,6 +21,71 @@ margin: 0 auto;
     -o-background-size: cover;
     background-size: cover;
 }
+/* iPhone 5 ----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    }
+    
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    }
+    
+    /* iPhone 6 ----------- */
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    }
+    
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    }
+    
+    /* iPhone 6+ ----------- */
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    }
+    
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    }
+    
+    /* Samsung Galaxy S3 ----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    }
+    
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    }
+    
+    /* Samsung Galaxy S4 ----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    }
+    
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    }
+    
+    /* Samsung Galaxy S5 ----------- */
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    }
+    
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    }
 `;
 
 const Logo = styled.img`
