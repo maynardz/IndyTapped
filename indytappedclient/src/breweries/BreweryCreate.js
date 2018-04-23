@@ -7,7 +7,10 @@ color: white;
 text-align: center;
 font-family: 'Raleway', sans-serif;
 text-shadow: 1.5px 1.5px #000000
+`;
 
+const Center = styled.div`
+text-align: center;
 `;
 
 class BreweryCreate extends Component {
@@ -65,7 +68,9 @@ class BreweryCreate extends Component {
                             <option value="5">5</option>
                         </Input>
                     </FormGroup>
+                    <Center>
                     <Button type="submit" color="secondary"> Submit </Button>
+                    </Center>
                 </Form>
             </div>  
         )

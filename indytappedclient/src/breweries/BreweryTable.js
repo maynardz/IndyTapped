@@ -8,9 +8,22 @@ font-family: 'Raleway', sans-serif;
 margin-top: 1em;
 `;
 
+const Width = styled.div`
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+}
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+}
+`;
+
 const BreweryTable = (props) => {
     return (
-        <div>
+        <Width>
             <Row>
                 <Col md="3">
                 </Col>
@@ -48,7 +61,7 @@ const BreweryTable = (props) => {
                 <Col md="3">
                 </Col>
             </Row>
-        </div>
+        </Width>
     )
 }
 
