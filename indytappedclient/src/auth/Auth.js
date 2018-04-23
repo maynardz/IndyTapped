@@ -13,25 +13,84 @@ background-size: 100%
 display: block;
 margin: 0 auto;
 z-index: 0;
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    overflow: hidden;
+}
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) {
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 `;
 
 const Logo = styled.img`
 height: 55em;
 width: 55em;
-margin: 0 auto:
-display: block;
 z-index: 1;
+position: relative;
+margin-left: 23em;
+margin-top: -5em;
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    display: block;
+    margin: 0 auto;
+    height: 10em;
+    width: 10em;
+}
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) {
+    display: block;
+    margin: 0 auto;
+    height: 10em;
+    width: 10em;
+}
 `;
 
 const Confirm = styled.p`
-margin-top: -14em
-margin-left: 12.75em;
+margin-top: -2em;
 font-size: 25px;
+text-align: center;
+font-family: 'Raleway', sans-serif;
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    font-size: 15px;
+    margin-top: 5em;
+}
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) {
+    font-size: 15px;
+    margin-top: 5em;
+}
 `;
 
 const LogSign = styled.div`
-margin-top: -27em;
-`
+text-align: center
+margin-top: -7em;
+z-index: 2;
+position: relative;
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    font-size: 15px;
+    margin-top: 5em;
+}
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) {
+    font-size: 15px;
+    margin-top: 5em;
+}
+`;
+
+const YesNo = styled.div`
+text-align: center;
+}
+`;
+
+const Giphy = styled.p`
+position: absolute;
+top: 90%;
+left: 37%;
+margin: -25px 0px 0px -25px;
+margin-top: -5.5em;
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    top: 37%;
+    left: 0%;
+`;
 
 class Auth extends React.Component {
     constructor(props) {
@@ -56,27 +115,35 @@ class Auth extends React.Component {
                 <LogSign>
                     <Row>
                         <Col md="3">
+                        </Col>
+                        <Col md="3">
                             <Signup setToken={this.props.setToken} />
                         </Col>
                         <Col md="3" className="login-col">
                             <Login setToken={this.props.setToken} />
+                        </Col>
+                        <Col md="3">
                         </Col>
                     </Row>
                 </LogSign>
             )
         } else if (this.state.isNot21) {
             return (
-                <p>sorry</p>
+                <Giphy><iframe src="https://giphy.com/embed/JyW51lx5XMDgQ" width="480" height="280" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/john-wayne-JyW51lx5XMDgQ"></a></p></Giphy>
             )
         } else {
             return (
                 <div>
                     <div>
+                    <Col lg="12">
                         <Confirm>Please confirm that you are over 21 years old.</Confirm>
-                    </div>
-                    <div>
+                    </Col>
+                    <YesNo>
+                    <Col lg="12">
                         <Button outline color="secondary" size="lg" onClick={this.isTwentyOne}>Yes</Button>
                         <Button outline color="secondary" size="lg" onClick={this.isNotTwentyOne}>No</Button>
+                    </Col>
+                    </YesNo>
                     </div>
                 </div>
             )

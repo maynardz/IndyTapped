@@ -1,42 +1,37 @@
 import React, { Component } from 'react';
 import BreweryResults from './BreweryResults';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'reactstrap';
+import { Form, FormGroup, Input, Col, Row } from 'reactstrap';
 import BreweryCreate from './BreweryCreate';
+import BreweryTable from './BreweryTable';
+import BreweryEdit from './BreweryEdit';
 
-const SearchInput = styled.input`  
-margin-top: 1em;
-width: 297px;
-padding: 15px 0 15px 10px;
-font-size: 16px;
-border: 0 none;
-height: 52px;
-margin-right: 0;
-outline: none;
-float: left;
-box-sizing: border-box;
-transition: all 0.15s;
+const Padding = styled.div`
+padding: 5em;
 `;
 
-const SearchBreweries = styled.h3`
+const Title = styled.h3`
 color: white;
-margin-top: 2em;
-margin-left: 1.2em;
 text-align: center;
-float: left;
-`
+font-family: 'Raleway', sans-serif;
+text-shadow: 1.5px 1.5px #000000
+`;
 
 class Brewery extends Component {
     constructor(props) {
         super(props)
         this.state = {
             results: [],
-            filteredResults: []
+            filteredResults: [],
+            userbreweries: [],
+            updatePressed: false,
+            breweryToUpdate: {}
         }
     }
 
     componentDidMount = () => {
         this.fetchBreweries();
+        this.fetchUserBreweries();
     }
 
     handleSubmit = (e) => {
@@ -74,22 +69,87 @@ class Brewery extends Component {
             })
     }
 
+    fetchUserBreweries = () => {
+        fetch(`http://localhost:3000/indytapped/userbreweries`, {
+            method: 'GET',
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                'Authorization': this.props.token
+            })
+        })
+            .then((res) => res.json())
+            .then((userbreweriesData) => {
+                return this.setState({ userbreweries: userbreweriesData })
+            })
+    }
+
+    breweryDelete = (event) => {
+        fetch(`http://localhost:3000/indytapped/userbreweries/${event.target.id}`, {
+            method: 'DELETE',
+            body: JSON.stringify({ userbreweries: { id: event.target.id } }),
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                'Authorization': this.props.token
+            })
+        })
+            .then((res) => this.fetchUserBreweries())
+    }
+
+    breweryUpdate = (event, userbreweries) => {
+        console.log(event.target.id)
+        fetch(`http://localhost:3000/indytapped/userbreweries/${userbreweries.id}`, {
+            method: 'PUT',
+            body: JSON.stringify({ userbreweries: userbreweries }),
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                'Authorization': this.props.token
+            })
+        })
+            .then((res) => {
+                this.setState({ updatePressed: false })
+                this.fetchUserBreweries();
+            })
+    }
+
+    setUpdatedBrewery = (event, userbreweries) => {
+        this.setState({
+            breweryToUpdate: userbreweries,
+            updatePressed: true
+        })
+    }
+
     render() {
         return (
-            <Container>
-                <Row>
-                    <form onSubmit={this.handleSubmit} id="form" autoComplete="off">
+            <div>
+                <Padding>
+                    <Row>
                         <Col md="5">
-                            <SearchBreweries> Search Breweries </SearchBreweries>
-                            <SearchInput onKeyUp={this.handleKeyUp} id="searchInput" className="searchBar" type="text" placeholder="Search by brewery or city" required />
-                            <BreweryResults results={this.state.filteredResults} />
+                            <Form onSubmit={this.handleSubmit} id="form" autoComplete="off">
+                                <FormGroup>
+                                    <Title> Search for an Indiana brewery </Title>
+                                    <hr />
+                                    <Input onKeyUp={this.handleKeyUp} id="searchInput" className="searchBar" type="text" placeholder="Search by brewery or city" required />
+                                    <BreweryResults results={this.state.filteredResults} />
+                                </FormGroup>
+                            </Form>
+                        </Col>
+                        <Col md="2">
                         </Col>
                         <Col md="5">
-                            <BreweryCreate token={this.props.token} />
+                            <BreweryCreate token={this.props.token} updateBreweriesArray={this.fetchUserBreweries} />
                         </Col>
-                    </form>
-                </Row>
-            </Container>
+                    </Row>
+                </Padding>
+                <div>
+                    <BreweryTable userbreweries={this.state.userbreweries} delete={this.breweryDelete} update={this.setUpdatedBrewery} />
+                    <Col md="12">
+                        {
+                            this.state.updatePressed ? <BreweryEdit t={this.state.updatePressed} update={this.breweryUpdate} userbreweries={this.state.breweryToUpdate} />
+                                : <div></div>
+                        }
+                    </Col>
+                </div>
+            </div>
         );
     }
 }

@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Form, FormGroup, Input } from 'reactstrap';
+import styled from 'styled-components';
+
+const Title = styled.h3`
+color: white;
+text-align: center;
+font-family: 'Raleway', sans-serif;
+text-shadow: 1.5px 1.5px #000000
+
+`;
 
 class BreweryCreate extends Component {
     constructor() {
@@ -26,25 +35,29 @@ class BreweryCreate extends Component {
                 'Authorization': this.props.token
             })
         })
-            .then(response => response.json())
-            .then(data => console.log(data));
-        event.preventDefault();
+            .then((res) => res.json())
+            .then((userbreweriesData) => {
+                this.props.updateBreweriesArray()
+                this.setState({
+                    brewery: '',
+                    rating: ''
+                })
+            })
+            event.preventDefault()
     }
 
     render() {
         return (
             <div>
-                <h3>Enter a Brewery You'd Like to Visit</h3>
+                <Title> Add it to your list of visited breweries </Title>
                 <hr />
                 <Form onSubmit={this.handleSubmit} >
                     <FormGroup>
-                        <Label for="brewery">Brewery</Label>
-                        <Input id="brewery" type="text" name="brewery" value={this.state.Brewery} placeholder="enter a brewery" onChange={this.handleChange} />
+                        <Input id="brewery" type="text" name="brewery" value={this.state.Brewery} placeholder="Enter a brewery" onChange={this.handleChange} />
                     </FormGroup>
                     <FormGroup>
-                        <Label for="rating">Rating</Label>
                         <Input type="select" name="rating" id="rating" value={this.state.Rating} onChange={this.handleChange} placeholder="Type">
-                            <option></option>
+                            <option>Rating</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -52,9 +65,9 @@ class BreweryCreate extends Component {
                             <option value="5">5</option>
                         </Input>
                     </FormGroup>
-                    <Button type="submit" color="primary"> Submit </Button>
+                    <Button type="submit" color="secondary"> Submit </Button>
                 </Form>
-            </div>
+            </div>  
         )
     }
 }

@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Input } from 'reactstrap';
+import styled from 'styled-components';
+
+const Title = styled.h4`
+font-family: 'Raleway', sans-serif;
+`;
 
 class Login extends Component{
     constructor(props) {
@@ -35,8 +40,7 @@ class Login extends Component{
     render() {
         return(
             <div>
-                <h3>Login</h3>
-                <hr />
+                <Title>Login</Title>
                 <Form onSubmit={this.handleSubmit} >
                     <FormGroup>
                         <Input name="username" type="text" placeholder="enter username" onChange={this.handleChange} />

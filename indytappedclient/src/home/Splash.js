@@ -6,14 +6,21 @@ import Brewery from '../breweries/Brewery';
 
 const BackgroundImage = styled.div`
 background-image: url(${background});
-background-size: 100vw 100vh;
-background-attachment: fixed;
 background-repeat: no-repeat;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: -1000;
+background-size: 100%;
+display: block;
+height: 55em;
+margin: 0 auto;
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) {
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 `;
 
 const Logo = styled.img`

@@ -6,11 +6,12 @@ var userBreweries = sequelize.import('../models/userBreweries.js');
 router.post('/', (req, res) => {
     var user = req.user
     var brewery = req.body.userbreweries.brewery
+    var rating = req.body.userbreweries.rating
 
     userBreweries.create({
         owner: user.id,
         brewery: brewery,
-        rating: 0
+        rating: rating
     }).then(
         function createSuccess(userBreweries) {
             res.json({
@@ -54,9 +55,11 @@ router.put('/:id', (req, res) => {
     var user = req.user
     var data = req.params.id
     var brewery = req.body.userbreweries.brewery
+    var rating = req.body.userbreweries.rating
 
     userBreweries.update({
-        brewery: brewery
+        brewery: brewery,
+        rating: rating
     }, {where: {id: data}}).then(
         function updateSuccess(updateData) {
             res.json(updateData)
