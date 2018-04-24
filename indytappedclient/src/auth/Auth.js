@@ -600,6 +600,11 @@ text-align: center;
 }
 `;
 
+const Space = styled.div`
+padding: 1em;
+display: inline
+`;
+
 const Giphy = styled.p`
 position: absolute;
 top: 90%;
@@ -749,15 +754,19 @@ class Auth extends React.Component {
             return (
                 <div>
                     <div>
-                    <Col lg="12">
-                        <Confirm>Please confirm that you are over 21 years old.</Confirm>
-                    </Col>
-                    <YesNo>
-                    <Col lg="12">
-                        <Button outline color="secondary" size="lg" onClick={this.isTwentyOne}>Yes</Button>
-                        <Button outline color="secondary" size="lg" onClick={this.isNotTwentyOne}>No</Button>
-                    </Col>
-                    </YesNo>
+                        <Col lg="12">
+                            <Confirm>Please confirm that you are over 21 years old.</Confirm>
+                        </Col>
+                        <YesNo>
+                            <Col lg="12">
+                                <Space>
+                                    <Button outline color="secondary" size="lg" onClick={this.isTwentyOne}>Yes</Button>
+                                </Space>
+                                <Space>
+                                    <Button outline color="secondary" size="lg" onClick={this.isNotTwentyOne}>No</Button>
+                                </Space>
+                            </Col>
+                        </YesNo>
                     </div>
                 </div>
             )
