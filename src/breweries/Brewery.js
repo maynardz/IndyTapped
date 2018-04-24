@@ -63,6 +63,7 @@ class Brewery extends Component {
                 })
             })
             .catch(err => {
+                console.log('Fetch Error:', err)
             })
     }
 
