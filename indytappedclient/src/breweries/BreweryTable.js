@@ -19,6 +19,42 @@ const Width = styled.div`
     display: block;
     margin: 0 auto;
 }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    display: block;
+    margin: 0 auto; 
+    margin-top: 10em:
+}
+    
+    /* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    display: block;
+    margin: 0 auto;    
+    margin-top: 10em;
+}
+    
+    /* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    display: block;
+    margin: 0 auto;    
+    margin-top: 10em;
+}
+
+    /**********
+    iPad 3
+    **********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+    display: block;
+    margin: 0 auto;   
+    margin-top: 10em;
+}
+    
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10em;
+}
 `;
 
 const BreweryTable = (props) => {

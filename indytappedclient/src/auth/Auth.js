@@ -36,12 +36,7 @@ z-index: 0;
     
     /* iPhone 5 ----------- */
     @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    overflow: hidden;    }
-    
-    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    -moz-background-size: cover;
+    -moz-background-size: cover
     -o-background-size: cover;
     overflow: hidden;    }
     
