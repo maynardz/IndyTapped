@@ -612,7 +612,7 @@ left: 37%;
 margin: -25px 0px 0px -25px;
 margin-top: -5.5em;
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    top: 43%;
+    top: 60%;
     left: 0%;
 }
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) {
