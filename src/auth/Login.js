@@ -28,7 +28,7 @@ class Login extends Component {
 
     handleSubmit = (event) => {
         //POST - fetch
-        fetch("http://localhost:3000/indytapped/login", {
+        fetch("https://zsm-indytappedclient.herokuapp.com/indytapped/login", {
             method: 'POST',
             body: JSON.stringify({ user: this.state }),
             headers: new Headers({

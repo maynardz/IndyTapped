@@ -28,7 +28,7 @@ class Signup extends Component{
 
     handleSubmit = (event) => {
         //POST - fetch
-        fetch("http://localhost:3000/indytapped/user", {
+        fetch("https://zsm-indytappedclient.herokuapp.com/indytapped/user", {
             method: 'POST',
             body: JSON.stringify({user: this.state}),
             headers: new Headers({
