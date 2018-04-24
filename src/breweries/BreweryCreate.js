@@ -29,7 +29,7 @@ class BreweryCreate extends Component {
     }
 
     handleSubmit = (event) => {
-        fetch('https://zsm-indytapped.herokuapp.com/indytapped/userbreweries', {
+        fetch('https://zsm-indytappedserver.herokuapp.com/indytapped/userbreweries', {
             method: 'POST',
             body: JSON.stringify({ userbreweries: this.state }),
             headers: new Headers({
