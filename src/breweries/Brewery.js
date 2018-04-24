@@ -52,7 +52,7 @@ class Brewery extends Component {
     }
 
     fetchBreweries = () => {
-        fetch(`https://zsm-indytappedclient.herokuapp.com/indytapped/breweries`)
+        fetch(`https://zsm-indytapped.herokuapp.com/indytapped/breweries`)
             .then(response => {
                 if (response.status !== 200) {
                     return;
@@ -67,7 +67,7 @@ class Brewery extends Component {
     }
 
     fetchUserBreweries = () => {
-        fetch(`https://zsm-indytappedclient.herokuapp.com//indytapped/userbreweries`, {
+        fetch(`https://zsm-indytapped.herokuapp.com//indytapped/userbreweries`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ class Brewery extends Component {
     }
 
     breweryDelete = (event) => {
-        fetch(`https://zsm-indytappedclient.herokuapp.com/indytapped/userbreweries/${event.target.id}`, {
+        fetch(`https://zsm-indytapped.herokuapp.com/indytapped/userbreweries/${event.target.id}`, {
             method: 'DELETE',
             body: JSON.stringify({ userbreweries: { id: event.target.id } }),
             headers: new Headers({
@@ -94,7 +94,7 @@ class Brewery extends Component {
 
     breweryUpdate = (event, userbreweries) => {
         console.log(event.target.id)
-        fetch(`https://zsm-indytappedclient.herokuapp.com/indytapped/userbreweries/${userbreweries.id}`, {
+        fetch(`https://zsm-indytapped.herokuapp.com/indytapped/userbreweries/${userbreweries.id}`, {
             method: 'PUT',
             body: JSON.stringify({ userbreweries: userbreweries }),
             headers: new Headers({
