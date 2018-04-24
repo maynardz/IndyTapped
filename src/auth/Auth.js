@@ -605,110 +605,10 @@ padding: 1em;
 display: inline
 `;
 
-const Giphy = styled.p`
-position: absolute;
-top: 90%;
-left: 37%;
-margin: -25px 0px 0px -25px;
-margin-top: -5.5em;
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    top: 60%;
-    left: 0%;
-}
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) {
-    top: 75%;
-    left: 20%;
-}
-
-/* iPhone 4 ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-    top: 43%;
-    left: 0%;    
-}
-    
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-    top: 60%;
-    left: 0%;    
-}
-    
-    /* iPhone 5 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-    top: 60%;
-    left: 0%;    
-}
-    
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    top: 75%;
-    left: 0%;    
-}
-    
-    /* iPhone 6 ----------- */
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-    top: 60%;
-    left: 0%;    
-}
-    
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    top: 60%;
-    left: 0%;    
-}
-    
-    /* iPhone 6+ ----------- */
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-    top: 82%;
-    left: 17%;    
-}
-    
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    top: 60%;
-    left: 0%;    
-}
-    
-    /* Samsung Galaxy S3 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-    top: 82%;
-    left: 17%;    
-}
-    
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    top: 60%;
-    left: 0%;    
-}
-    
-    /* Samsung Galaxy S4 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-    top: 43%;
-    left: 0%;    
-}
-    
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-    top: 60%;
-    left: 0%;    
-}
-    
-    /* Samsung Galaxy S5 ----------- */
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-    top: 75%;
-    left: 21%;    
-}
-    
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-    top: 60%;
-    left: 0%;    
-}
-
-    /**********
-    iPad 3
-    **********/
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-    top: 42%;
-    left: 28%;     
-}
-    
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-    top: 32%;
-    left: 22%;     
-}
+const Giphy = styled.div`
+font-size: 20px;
+font-family: 'Raleway', sans-serif;
+text-align: center;
 `;
 
 class Auth extends React.Component {
@@ -748,7 +648,17 @@ class Auth extends React.Component {
             )
         } else if (this.state.isNot21) {
             return (
-                <Giphy><iframe src="https://giphy.com/embed/JyW51lx5XMDgQ" width="480" height="280" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/john-wayne-JyW51lx5XMDgQ"></a></p></Giphy>
+                <Giphy>
+                    <Row>
+                        <Col md="3">
+                        </Col>
+                        <Col md="6">
+                            <p>Sorry, you're not old enough to view this webpage</p>
+                        </Col>
+                        <Col md="3">
+                        </Col>
+                    </Row>
+                </Giphy>
             )
         } else {
             return (
