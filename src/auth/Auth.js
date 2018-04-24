@@ -627,7 +627,7 @@ margin-top: -5.5em;
 }
     
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-    top: 43%;
+    top: 60%;
     left: 0%;    
 }
     
