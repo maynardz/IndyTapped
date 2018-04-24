@@ -655,8 +655,8 @@ margin-top: -5.5em;
     
     /* iPhone 6+ ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-    top: 46%;
-    left: 0%;    
+    top: 82%;
+    left: 17%;    
 }
     
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
