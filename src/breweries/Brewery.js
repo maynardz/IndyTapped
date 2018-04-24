@@ -52,13 +52,7 @@ class Brewery extends Component {
     }
 
     fetchBreweries = () => {
-        fetch(`https://zsm-indytapped.herokuapp.com/indytapped/breweries`, {
-            method: 'GET',
-            headers: new Headers({
-                'Content-Type': 'application/json',
-                'Authorization': this.props.token
-            })
-        })
+        fetch(`https://zsm-indytapped.herokuapp.com/indytapped/breweries`)
             .then(response => {
                 if (response.status !== 200) {
                     console.log('Error: ' + response.status)
