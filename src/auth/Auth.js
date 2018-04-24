@@ -649,7 +649,7 @@ margin-top: -5.5em;
 }
     
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    top: 46%;
+    top: 60%;
     left: 0%;    
 }
     
@@ -660,7 +660,7 @@ margin-top: -5.5em;
 }
     
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    top: 43%;
+    top: 60%;
     left: 0%;    
 }
     
