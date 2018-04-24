@@ -67,7 +67,7 @@ class Brewery extends Component {
     }
 
     fetchUserBreweries = () => {
-        fetch(`https://zsm-indytapped.herokuapp.com//indytapped/userbreweries`, {
+        fetch(`https://zsm-indytapped.herokuapp.com/indytapped/userbreweries`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
