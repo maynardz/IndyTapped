@@ -644,7 +644,7 @@ margin-top: -5.5em;
     
     /* iPhone 6 ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-    top: 46%;
+    top: 60%;
     left: 0%;    
 }
     
@@ -671,7 +671,7 @@ margin-top: -5.5em;
 }
     
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    top: 50%;
+    top: 60%;
     left: 0%;    
 }
     
@@ -682,7 +682,7 @@ margin-top: -5.5em;
 }
     
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-    top: 43%;
+    top: 60%;
     left: 0%;    
 }
     
@@ -693,7 +693,7 @@ margin-top: -5.5em;
 }
     
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-    top: 48%;
+    top: 60%;
     left: 0%;    
 }
 
