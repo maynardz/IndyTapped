@@ -25,7 +25,7 @@ const BreweryResults = ({ results }) => {
             <div>
                 <p>{result.Brewery}</p>
                 <p>{result.Address}</p>
-                <p>{result.City}{', '}{result.State}</p>
+                <p>{result.City}{', '}{result.State}{' '}{result.ZipCode}</p>
             </div>
         </li>
     );
