@@ -24,8 +24,8 @@ const BreweryResults = ({ results }) => {
         <li key={result}>
             <div>
                 <p>{result.Brewery}</p>
-                <p>{result.City}{', '}{result.State}{' - '}{' # '}{result.id}</p>
                 <p>{result.Address}</p>
+                <p>{result.City}{', '}{result.State}</p>
             </div>
         </li>
     );
