@@ -8,6 +8,10 @@ font-family: 'Raleway', sans-serif;
 margin-top: 1em;
 `;
 
+const ButtonSpacer = styled.span`
+margin-left: 5px;
+`
+
 const Width = styled.div`
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     width: 75%;
@@ -85,6 +89,7 @@ const BreweryTable = (props) => {
                                             <td>{userbreweries.rating}</td>
                                             <td>
                                                 <Button id={userbreweries.id} onClick={props.delete} outline color="secondary">Delete</Button>
+                                                <ButtonSpacer/>
                                                 <Button id={userbreweries.id} onClick={e => props.update(e, userbreweries)} outline color="secondary">Update</Button>
                                             </td>
                                         </tr>
