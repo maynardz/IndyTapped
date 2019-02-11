@@ -13,6 +13,7 @@ margin-left: 5px;
 `
 
 const Width = styled.div`
+overflow: hidden;
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     width: 75%;
     display: block;
