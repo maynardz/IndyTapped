@@ -5,10 +5,9 @@ import styled from 'styled-components';
 import Brewery from '../breweries/Brewery';
 
 const BackgroundImage = styled.div`
-background-image: url(${background});
+background-image: url(${});
 background-repeat: no-repeat;
 background-size: 100%;
-background-color: black;
 display: block;
 height: 55em;
 margin: 0 auto;
