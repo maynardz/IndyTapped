@@ -8,6 +8,7 @@ const BackgroundImage = styled.div`
 background-image: url(${background});
 background-repeat: no-repeat;
 background-size: 100%;
+background-color: black;
 display: block;
 height: 55em;
 margin: 0 auto;
