@@ -9,6 +9,7 @@ margin-top: 1em;
 `;
 
 const ButtonSpacer = styled.span`
+padding: 0;
 margin-left: 5px;
 `
 
