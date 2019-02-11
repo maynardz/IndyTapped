@@ -69,7 +69,7 @@ const BreweryTable = (props) => {
                     <Table striped>
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th></th>
                                 <th>Brewery</th>
                                 <th>Rating</th>
                                 <th></th>
@@ -80,7 +80,7 @@ const BreweryTable = (props) => {
                                 props.userbreweries.map((userbreweries, id) => {
                                     return (
                                         <tr key={id}>
-                                            <th scope="row">{userbreweries.id}</th> 
+                                            <th scope="row"></th> 
                                             <td>{userbreweries.brewery}</td>
                                             <td>{userbreweries.rating}</td>
                                             <td>

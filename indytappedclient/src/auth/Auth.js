@@ -130,11 +130,11 @@ const Logo = styled.img`
 height: 55em;
 width: 55em;
 z-index: 1;
-position: relative;
 margin-left: 23em;
 margin-top: -5em;
 
 @media only screen and (min-width: 768px) {
+    
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
