@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Title = styled.h3`
 text-align: center;
 font-family: 'Raleway', sans-serif;
-margin-top: 1em;
+margin-top: 3em;
 `;
 
 const ButtonSpacer = styled.span`
