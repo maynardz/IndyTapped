@@ -103,6 +103,34 @@ class BreweryCreate extends Component {
                             <option value="GnomeTown Brewing Co.">GnomeTown Brewing Co.</option>
                             <option value="Goshen Brewing Co.">Goshen Brewing Co.</option>
                             <option value="Grand Junction Brewing Co.">Grand Junction Brewing Co.</option>
+                            <option value="Half Moon">Half Moon</option>
+                            <option value="Heavenly Goat Brewing Co.">Heavenly Goat Brewing Co.</option>
+                            <option value="Hoosier Brewing Co.">Hoosier Brewing Co.</option>
+                            <option value="Hop River Brewing Co.">Hop River Brewing Co.</option>
+                            <option value="HopLore Brewing Co.">HopLore Brewing Co.</option>
+                            <option value="Hunter's Brewing Co.">Hunter's Brewing Co.</option>
+                            <option value="Iechyd Da Brewing Co.">Iechyd Da Brewing Co.</option>
+                            <option value="Indiana City Brewing Co.">Indiana City Brewing Co.</option>
+                            <option value="Ironwood Brewing Co.">Ironwood Brewing Co.</option>
+                            <option value="Junk Ditch Brewing Co.">Junk Ditch Brewing Co.</option>
+                            <option value="Kopacetic Beer Factory">Kopacetic Beer Factory</option>
+                            <option value="Lafayette Brewing Co.">Lafayette Brewing Co.</option>
+                            <option value="LaOtto Brewing">LaOtto Brewing</option>
+                            <option value="Mad Anthony Brewing Co.">Mad Anthony Brewing Co.</option>
+                            <option value="Mashcraft Brewing">Mashcraft Brewing</option>
+                            <option value="Metazoa Brewing Co.">Metazoa Brewing Co.</option>
+                            <option value="Moontown Brewing Co.">Moontown Brewing Co.</option>
+                            <option value="New Albanian Brewing Co.">New Albanian Brewing Co.</option>
+                            <option value="New Corner Brewing Co.">New Corner Brewing Co.</option>
+                            <option value="New Oberpfalz Brewing">New Oberpfalz Brewing</option>
+                            <option value="Noble Order Brewing Co.">Noble Order Brewing Co.</option>
+                            <option value="Norris English Pub">Norris English Pub</option>
+                            <option value="Off Square Brewing">Off Square Brewing</option>
+                            <option value="Orthocity Brewery & Smokehouse">Orthocity Brewery & Smokehouse</option>
+                            <option value="Pax Verum Brewing">Pax Verum Brewing</option>
+                            <option value="People's Brewing Co.">People's Brewing Co.</option>
+                            <option value="Planetary Brewing Co.">Planetary Brewing Co.</option>
+                            <option value="Pokro Brewing Co.">Pokro Brewing Co.</option>
                         </Input>
                     </FormGroup>
                     <FormGroup>
@@ -119,7 +147,7 @@ class BreweryCreate extends Component {
                     <Button type="submit" color="secondary"> Submit </Button>
                     </Center>
                 </Form>
-            </div>  
+            </div>
         )
     }
 }

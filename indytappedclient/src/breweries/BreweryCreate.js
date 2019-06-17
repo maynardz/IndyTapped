@@ -116,6 +116,22 @@ class BreweryCreate extends Component {
                             <option value="Kopacetic Beer Factory">Kopacetic Beer Factory</option>
                             <option value="Lafayette Brewing Co.">Lafayette Brewing Co.</option>
                             <option value="LaOtto Brewing">LaOtto Brewing</option>
+                            <option value="Mad Anthony Brewing Co.">Mad Anthony Brewing Co.</option>
+                            <option value="Mashcraft Brewing">Mashcraft Brewing</option>
+                            <option value="Metazoa Brewing Co.">Metazoa Brewing Co.</option>
+                            <option value="Moontown Brewing Co.">Moontown Brewing Co.</option>
+                            <option value="New Albanian Brewing Co.">New Albanian Brewing Co.</option>
+                            <option value="New Corner Brewing Co.">New Corner Brewing Co.</option>
+                            <option value="New Oberpfalz Brewing">New Oberpfalz Brewing</option>
+                            <option value="Noble Order Brewing Co.">Noble Order Brewing Co.</option>
+                            <option value="Norris English Pub">Norris English Pub</option>
+                            <option value="Off Square Brewing">Off Square Brewing</option>
+                            <option value="Orthocity Brewery & Smokehouse">Orthocity Brewery & Smokehouse</option>
+                            <option value="Pax Verum Brewing">Pax Verum Brewing</option>
+                            <option value="People's Brewing Co.">People's Brewing Co.</option>
+                            <option value="Planetary Brewing Co.">Planetary Brewing Co.</option>
+                            <option value="Pokro Brewing Co.">Pokro Brewing Co.</option>
+
 
 
                         </Input>
