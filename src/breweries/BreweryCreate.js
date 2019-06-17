@@ -131,6 +131,44 @@ class BreweryCreate extends Component {
                             <option value="People's Brewing Co.">People's Brewing Co.</option>
                             <option value="Planetary Brewing Co.">Planetary Brewing Co.</option>
                             <option value="Pokro Brewing Co.">Pokro Brewing Co.</option>
+                            <option value="Quaff On! Brewing Co.">Quaff On! Brewing Co.</option>
+                            <option value="Raintree Brewing Co.">Raintree Brewing Co.</option>
+                            <option value="Redemption Aleworks">Redemtion Aleworks</option>
+                            <option value="Rock Bottom Brewing">Rock Bottom Brewing</option>
+                            <option value="Round Town Brewing">Round Town Brewing</option>
+                            <option value="Saint Benedict's Brew Works">Saint Benedict's Brew Works</option>
+                            <option value="Salt Creek Brewery">Salt Creek Brewery</option>
+                            <option value="Scarlet Lane Brewing">Scarlet Lane Brewing</option>
+                            <option value="Schnitz Brewery & Pub">Schnitz Brewery & Pub</option>
+                            <option value="Shale Creek Brewing">Shale Creek Brewing</option>
+                            <option value="St. John Malt Brothers Brewing">St. John Malt Brothers Brewing</option>
+                            <option value="St. Joseph Brewery">St. Joseph Brewery</option>
+                            <option value="Summit City Brewerks">Summit City Brewerks</option>
+                            <option value="Sun King Brewing Co.">Sun King Brewing Co.</option>
+                            <option value="Taxman Brewing Co.">Taxman Brewing Co.</option>
+                            <option value="Teays River Brewing & Public House">Teays River Brewing & Public House</option>
+                            <option value="Terre Haute Brewing Co.">Terre Haute Brewing Co.</option>
+                            <option value="The Devil's Trumpet Brewing Co.">The Devil's Trumpet Brewing Co.</option>
+                            <option value="The Ram Restaurant & Brewery">The Ram Restaurant & Brewery</option>
+                            <option value="The Seymour Brewing Co.">The Seymour Brewing Co.</option>
+                            <option value="The Sour Note Brewing">The Sour Note Brewing</option>
+                            <option value="The Tap">The Tap</option>
+                            <option value="The Vincennes Brewing Co.">The Vincennes Brewing Co.</option>
+                            <option value="Thr3e Wise Men Brewery">Thr3e Wise Men Brewery</option>
+                            <option value="Three Floyds Brewing Co.">Three Floyds Brewing Co.</option>
+                            <option value="Tin Man Brewing Co.">Tin Man Brewing Co.</option>
+                            <option value="Triton Brewing">Triton Brewing</option>
+                            <option value="Trubble Brewing">Trubble Brewing</option>
+                            <option value="Twenty Below">Twenty Below</option>
+                            <option value="TwoDEEP Brewing Co.">TwoDEEP Brewing Co.</option>
+                            <option value="Union Brewing">Union Brewing</option>
+                            <option value="Upland Brewing Co.">Upland Brewing Co.</option>
+                            <option value="Urban Vines Brewery">Urban Vines Brewery</option>
+                            <option value="Wabash Brewing Co.">Wabash Brewing Co.</option>
+                            <option value="Wasser Brewing Co.">Wasser Brewing Co.</option>
+                            <option value="Wooden Bear Brewing Co.">Wooden Bear Brewing Co.</option>
+                            <option value="Zorn Brew Works Co.">Zorn Brew Works Co.</option>
+                            <option value="Zwanzigz Pizza & Brewing">Zwanzigz Pizza & Brewing</option>
                         </Input>
                     </FormGroup>
                     <FormGroup>
