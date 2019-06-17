@@ -169,10 +169,6 @@ class BreweryCreate extends Component {
                             <option value="Wooden Bear Brewing Co.">Wooden Bear Brewing Co.</option>
                             <option value="Zorn Brew Works Co.">Zorn Brew Works Co.</option>
                             <option value="Zwanzigz Pizza & Brewing">Zwanzigz Pizza & Brewing</option>
-
-
-
-
                         </Input>
                     </FormGroup>
                     <FormGroup>
